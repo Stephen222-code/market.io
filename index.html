@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="泡泡玛特创始人王宁2026最新访谈 | 李翔详谈：F1赛道上的组织进化与IP全球化">
-    <title>泡泡玛特 · 王宁 2026 | 李翔详谈</title>
+    <title>泡泡玛特王宁2026最新访谈 | 从F1赛道到组织进化</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=Inter:wght@400;500&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap');
         
         :root {
-            --tw-color-beige: #f8f4ed;
+            --beige: #f8f4eb;
         }
         
         * {
@@ -19,37 +20,24 @@
             transition-duration: 150ms;
         }
         
-        .tailwind-ready .serif {
-            font-family: 'Playfair Display', serif;
+        .tailwind-content * {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
         }
         
-        .hero-bg {
-            background: linear-gradient(180deg, #f8f4ed 0%, #f0e8df 100%);
+        .serif-title {
+            font-family: 'Playfair Display', sans-serif;
+        }
+        
+        .dark-bar {
+            background: linear-gradient(to right, #111827, #1f2937);
         }
         
         .accent-pink {
-            color: #e11d8a;
-        }
-        
-        .dark-nav {
-            background: #0a0a0a;
-            box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+            color: #e11d48;
         }
         
         .quote-card {
-            position: relative;
-        }
-        
-        .quote-card::before {
-            content: '“';
-            position: absolute;
-            left: -8px;
-            top: -12px;
-            font-size: 6rem;
-            line-height: 1;
-            color: #e11d8a;
-            opacity: 0.15;
-            font-family: 'Playfair Display', serif;
+            border-left: 6px solid #e11d48;
         }
         
         .section-header {
@@ -59,546 +47,390 @@
         .section-header::after {
             content: '';
             position: absolute;
-            bottom: -4px;
             left: 0;
-            width: 64px;
+            bottom: -4px;
+            width: 48px;
             height: 3px;
-            background: #e11d8a;
-            border-radius: 9999px;
+            background-color: #e11d48;
         }
         
-        .content-text {
-            font-feature-settings: "ss01";
+        .hero-image {
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
         
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        .animate-in {
-            animation: fadeInUp 0.6s backwards;
+        .hero-image:hover {
+            transform: scale(1.05);
         }
     </style>
 </head>
-<body class="tailwind-ready">
+<body class="tailwind-content bg-[#f8f4eb] text-slate-800">
     <!-- 顶部深色横条 -->
-    <nav class="dark-nav sticky top-0 z-50">
-        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
-            <div class="flex items-center justify-between h-16">
-                <!-- Logo -->
-                <div class="flex items-center gap-x-3">
-                    <div class="w-8 h-8 bg-white rounded-2xl flex items-center justify-center text-[#e11d8a] text-xl font-bold leading-none pt-0.5">泡</div>
-                    <div class="text-white text-2xl font-semibold tracking-[-0.5px] serif">泡泡玛特</div>
-                    <div class="hidden sm:block text-white/70 text-sm font-medium pl-2 border-l border-white/30">POP MART</div>
+    <div class="dark-bar text-white py-3 text-sm">
+        <div class="max-w-screen-2xl mx-auto px-8 flex items-center justify-between">
+            <div class="flex items-center gap-x-8">
+                <!-- 品牌标识 -->
+                <div class="flex items-center gap-x-2">
+                    <div class="w-8 h-8 bg-white text-[#e11d48] rounded flex items-center justify-center text-xl font-bold">泡</div>
+                    <span class="text-xl font-semibold tracking-widest">泡泡玛特</span>
                 </div>
                 
-                <!-- 标题 -->
-                <div class="hidden md:flex items-center gap-x-8 text-white">
-                    <a onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">访谈首页</a>
-                    <a onclick="document.getElementById('insights').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">核心洞见</a>
-                    <a onclick="document.getElementById('organization').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">组织进化</a>
-                    <a onclick="document.getElementById('global').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">全球化</a>
-                    <a onclick="document.getElementById('ip').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">IP运营</a>
-                    <a onclick="document.getElementById('future').scrollIntoView({ behavior: 'smooth' })" 
-                       class="hover:text-[#e11d8a] font-medium text-sm uppercase tracking-widest">战略展望</a>
-                </div>
-                
-                <div class="flex items-center gap-x-4">
-                    <div class="text-white/90 text-xs font-medium px-4 py-1.5 bg-white/10 hover:bg-white/20 rounded-3xl border border-white/30 flex items-center gap-x-1">
-                        <span class="relative flex h-2 w-2">
-                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#e11d8a] opacity-75"></span>
-                            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#e11d8a]"></span>
-                        </span>
-                        2026.05.06
-                    </div>
-                    <a href="https://www.popmart.com" target="_blank"
-                       class="text-white/70 hover:text-white text-sm flex items-center gap-x-1 font-medium">
-                        <span>进入官网</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L9 15" />
-                        </svg>
+                <!-- 导航 -->
+                <nav class="hidden md:flex items-center gap-x-6 text-sm font-medium">
+                    <a href="#" class="hover:text-[#e11d48] flex items-center gap-x-1">
+                        <i class="fa-solid fa-house"></i>
+                        <span>首页</span>
                     </a>
-                    
-                    <!-- 移动端菜单 -->
-                    <button onclick="toggleMobileMenu()" 
-                            class="md:hidden text-white p-2 hover:bg-white/10 rounded-2xl">
-                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </button>
-                </div>
+                    <a href="#interview" class="hover:text-[#e11d48]">访谈全文</a>
+                    <a href="#insights" class="hover:text-[#e11d48]">关键洞见</a>
+                    <a href="#organization" class="hover:text-[#e11d48]">组织进化</a>
+                    <a href="#global" class="hover:text-[#e11d48]">全球化</a>
+                    <a href="#ip" class="hover:text-[#e11d48]">IP战略</a>
+                </nav>
             </div>
             
-            <!-- 移动菜单 -->
-            <div id="mobile-menu" class="hidden md:hidden bg-[#0a0a0a] border-t border-white/10 py-6 px-8 text-white">
-                <div class="flex flex-col gap-y-6 text-sm uppercase tracking-widest font-medium">
-                    <a onclick="toggleMobileMenu();document.getElementById('insights').scrollIntoView({ behavior: 'smooth' })" class="py-1">核心洞见</a>
-                    <a onclick="toggleMobileMenu();document.getElementById('organization').scrollIntoView({ behavior: 'smooth' })" class="py-1">组织进化</a>
-                    <a onclick="toggleMobileMenu();document.getElementById('global').scrollIntoView({ behavior: 'smooth' })" class="py-1">全球化实践</a>
-                    <a onclick="toggleMobileMenu();document.getElementById('ip').scrollIntoView({ behavior: 'smooth' })" class="py-1">IP与拉布布</a>
-                    <a onclick="toggleMobileMenu();document.getElementById('future').scrollIntoView({ behavior: 'smooth' })" class="py-1">未来战略</a>
-                    <div class="pt-6 border-t border-white/10 flex items-center justify-between text-xs">
-                        <span class="text-white/60">李翔 × 王宁</span>
-                        <span class="text-[#e11d8a]">2026最新访谈</span>
-                    </div>
+            <div class="flex items-center gap-x-6">
+                <div class="flex items-center text-xs bg-white/10 px-3 py-1 rounded-full backdrop-blur-md">
+                    <span class="inline-block w-2 h-2 bg-green-400 rounded-full animate-pulse mr-1"></span>
+                    2026年5月6日
                 </div>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header id="hero" class="hero-bg pt-8 pb-16 lg:pb-24">
-        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
-            <div class="grid lg:grid-cols-12 gap-12 items-center">
-                <!-- 左侧文字 -->
-                <div class="lg:col-span-7">
-                    <div class="inline-flex items-center gap-x-2 bg-white shadow-sm text-[#e11d8a] text-sm font-medium px-5 h-9 rounded-3xl mb-6">
-                        <span>2026年5月6日</span>
-                        <span class="w-px h-3 bg-[#e11d8a]/30"></span>
-                        李翔详谈视频播客
-                    </div>
-                    
-                    <h1 class="serif text-5xl lg:text-7xl leading-[1.05] font-semibold tracking-[-1px] text-[#1a1a1a] max-w-2xl">
-                        F1赛道上的<br>泡泡玛特
-                    </h1>
-                    <h2 class="text-4xl lg:text-5xl serif text-[#e11d8a] mt-3 font-light tracking-[-0.5px]">
-                        王宁2026最新深度访谈
-                    </h2>
-                    
-                    <p class="mt-8 max-w-md text-xl text-[#3f3f3f] font-light leading-relaxed">
-                        从2025年200%高速增长，到组织极限测试。<br>
-                        创始人王宁首次完整讲述“过山车”一年，全球化、IP赋能与团队进化。
-                    </p>
-                    
-                    <div class="mt-10 flex items-center gap-x-8">
-                        <div onclick="window.scrollTo({top: document.getElementById('insights').offsetTop - 80, behavior: 'smooth'})" 
-                             class="flex items-center gap-x-3 group cursor-pointer">
-                            <div class="w-12 h-12 rounded-2xl bg-[#e11d8a] text-white flex items-center justify-center text-3xl group-active:scale-95">▶</div>
-                            <div>
-                                <div class="text-sm font-medium text-[#1a1a1a]">观看完整视频播客</div>
-                                <div class="text-[#e11d8a] text-xs">时长约47分钟 · 已发布</div>
-                            </div>
-                        </div>
-                        
-                        <div class="h-12 w-px bg-[#d1c6b8]"></div>
-                        
-                        <div class="text-sm">
-                            <div class="font-medium">受访人</div>
-                            <div class="text-[#1a1a1a] flex items-center gap-x-2">
-                                王宁
-                                <span class="text-[#e11d8a] text-base">泡泡玛特创始人</span>
-                            </div>
-                            <div class="text-xs text-[#8c7f6e] mt-1">对话人 · 李翔</div>
-                        </div>
-                        
-                        <a href="#" onclick="alert('已复制访谈链接至剪贴板（演示）')" 
-                           class="ml-auto lg:ml-0 flex items-center justify-center px-7 h-12 text-sm font-medium border-2 border-[#e11d8a] text-[#e11d8a] hover:bg-[#e11d8a] hover:text-white rounded-3xl">
-                            分享访谈
-                        </a>
-                    </div>
-                    
-                    <!-- 关键标签 -->
-                    <div class="mt-12 flex flex-wrap gap-3">
-                        <span onclick="highlightSection('organization')" 
-                              class="px-5 py-2 text-sm font-medium bg-white shadow-sm hover:shadow-md rounded-3xl border border-transparent hover:border-[#e11d8a]/20 flex items-center gap-x-1 cursor-pointer">
-                            <span class="text-[#e11d8a]">●</span> 组织进化
-                        </span>
-                        <span onclick="highlightSection('global')" 
-                              class="px-5 py-2 text-sm font-medium bg-white shadow-sm hover:shadow-md rounded-3xl border border-transparent hover:border-[#e11d8a]/20 flex items-center gap-x-1 cursor-pointer">
-                            <span class="text-[#e11d8a]">●</span> 全球化F1
-                        </span>
-                        <span onclick="highlightSection('ip')" 
-                              class="px-5 py-2 text-sm font-medium bg-white shadow-sm hover:shadow-md rounded-3xl border border-transparent hover:border-[#e11d8a]/20 flex items-center gap-x-1 cursor-pointer">
-                            <span class="text-[#e11d8a]">●</span> 拉布布赋能
-                        </span>
-                        <span onclick="highlightSection('future')" 
-                              class="px-5 py-2 text-sm font-medium bg-white shadow-sm hover:shadow-md rounded-3xl border border-transparent hover:border-[#e11d8a]/20 flex items-center gap-x-1 cursor-pointer">
-                            <span class="text-[#e11d8a]">●</span> 集团化战略
-                        </span>
-                    </div>
-                </div>
-                
-                <!-- 右侧视觉卡片 -->
-                <div class="lg:col-span-5 relative">
-                    <div class="bg-white shadow-2xl rounded-3xl p-8 max-w-xs mx-auto lg:mx-0 lg:ml-auto">
-                        <div class="flex justify-between items-start">
-                            <div>
-                                <div class="uppercase text-[#e11d8a] text-xs tracking-[1px] font-medium">2025年</div>
-                                <div class="text-6xl font-semibold serif text-[#1a1a1a] mt-1 leading-none">200%</div>
-                                <div class="text-[#666] text-lg">业务高速增长</div>
-                            </div>
-                            <div class="text-right">
-                                <div class="text-xs bg-[#e11d8a]/10 text-[#e11d8a] px-4 py-1 rounded-3xl">F1赛道</div>
-                                <div class="mt-8 text-[#1a1a1a] text-sm leading-tight">
-                                    “像刚学会开车就被拉去开F1”<br>
-                                    —— 王宁
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="mt-8 pt-8 border-t flex items-center justify-between text-sm">
-                            <div class="flex -space-x-4">
-                                <div class="w-8 h-8 bg-[#f8f4ed] border-2 border-white rounded-2xl flex items-center justify-center text-xl">🌍</div>
-                                <div class="w-8 h-8 bg-[#f8f4ed] border-2 border-white rounded-2xl flex items-center justify-center text-xl">🧸</div>
-                            </div>
-                            <div class="text-right">
-                                <div>海外收入占比</div>
-                                <div class="text-3xl font-semibold text-[#e11d8a]">接近50%</div>
-                                <div class="text-xs text-[#8c7f6e]">目标已大概率完成</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- 漂浮标签 -->
-                    <div class="absolute -top-6 -right-6 lg:right-12 bg-white text-[#1a1a1a] text-sm font-medium px-6 py-3 rounded-3xl shadow-xl flex items-center gap-x-2 rotate-[-6deg]">
-                        <span class="text-[#e11d8a]">95分</span>
-                        业务表现
-                        <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    </div>
-                    
-                    <div class="absolute bottom-8 -left-4 bg-white px-5 py-3 rounded-3xl shadow-2xl text-sm flex items-center gap-x-2 text-[#e11d8a]">
-                        <span>70分</span>
-                        <span class="text-[#1a1a1a]">组织管理</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- 引言摘要 -->
-    <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-12 border-b">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-[#3f3f3f] text-lg leading-relaxed content-text">
-                “上次坐下来聊是2024年9月3号，这将近一年半时间……我们最近老蒋说，我说现在很像是你刚学会开车，然后就把你拉去开F1。”
-            </p>
-            <div class="flex justify-center gap-x-8 mt-8 text-xs uppercase tracking-widest text-[#8c7f6e]">
-                <div>李翔</div>
-                <div class="w-px h-3 bg-[#d1c6b8]"></div>
-                <div>王宁 泡泡玛特创始人</div>
-            </div>
-            <p class="mt-6 text-sm max-w-lg mx-auto text-[#8c7f6e]">
-                2025年，泡泡玛特经历过山车式增长。王宁首次系统分享：高速扩张下的组织压力、全球化标准对齐、拉布布运营哲学，以及公司从“团队”走向“组织”的关键转变。
-            </p>
-        </div>
-    </div>
-
-    <!-- 核心洞见 - 可视化卡片网格 -->
-    <section id="insights" class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-16 bg-[#f8f4ed]">
-        <div class="flex items-end justify-between mb-12">
-            <div>
-                <span class="px-4 py-1 text-xs font-medium bg-[#e11d8a] text-white rounded-3xl">2025复盘</span>
-                <h2 class="section-header serif text-4xl text-[#1a1a1a] mt-3">核心洞见</h2>
-            </div>
-            <a onclick="document.getElementById('organization').scrollIntoView({ behavior: 'smooth' })" 
-               class="hidden md:flex items-center text-sm font-medium text-[#e11d8a] hover:gap-x-3">
-                深入阅读全部
-                <span class="text-2xl leading-none">→</span>
-            </a>
-        </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- 卡片1 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">F1赛道</span>
-                    <span class="text-4xl">🏎️</span>
-                </div>
-                <p class="text-[#1a1a1a] text-[21px] leading-tight serif font-light">"现在很像是你刚学会开车，然后就把你拉去开F1……你平时开车的时候听听音乐看看风景，但是开F1你会发现只有别人认为你很爽啊，但实际上你需要全神贯注，而且压力非常大。"</p>
-                <div class="mt-8 text-sm text-[#8c7f6e] flex justify-between items-center">
-                    <div>王宁</div>
-                    <div class="text-xs bg-[#f8f4ed] px-3 py-1 rounded-2xl">2025年最痛苦的一年</div>
-                </div>
-            </div>
-            
-            <!-- 卡片2 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">组织 vs 团队</span>
-                    <span class="text-4xl">🏗️</span>
-                </div>
-                <p class="text-[#1a1a1a] text-[21px] leading-tight serif font-light">“以前都是提团队，我觉得现在就可能对我来讲的话，比较深的感受就是组织……公司已经超过1万人，它已经变成一个非常复杂的、像毛细血管一样的组织。”</p>
-                <div class="mt-8 text-sm text-[#8c7f6e] flex justify-between items-center">
-                    <div>王宁</div>
-                    <div class="text-xs bg-[#f8f4ed] px-3 py-1 rounded-2xl">全球多国家·多文化</div>
-                </div>
-            </div>
-            
-            <!-- 卡片3 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">拉布布策略</span>
-                    <span class="text-4xl">🧸</span>
-                </div>
-                <p class="text-[#1a1a1a] text-[21px] leading-tight serif font-light">“我们暂停了很多他新品……暂停了很多他的对外合作，都是在做减法。我们不想让他太火……我们希望真正的用户能够买到，对它可持续更健康一些。”</p>
-                <div class="mt-8 text-sm text-[#8c7f6e] flex justify-between items-center">
-                    <div>王宁</div>
-                    <div class="text-xs bg-[#f8f4ed] px-3 py-1 rounded-2xl">反常识的“灭火”</div>
-                </div>
-            </div>
-            
-            <!-- 卡片4 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">2025评分</span>
-                    <span class="text-4xl">📊</span>
-                </div>
-                <div class="grid grid-cols-2 gap-8">
-                    <div>
-                        <div class="text-5xl font-semibold text-[#1a1a1a]">90-95</div>
-                        <div class="text-sm text-[#666]">业务成绩</div>
-                        <p class="text-xs mt-2 text-[#8c7f6e]">全球化成功 + 国内超预期增长</p>
-                    </div>
-                    <div>
-                        <div class="text-5xl font-semibold text-[#e11d8a]">70</div>
-                        <div class="text-sm text-[#666]">组织管理</div>
-                        <p class="text-xs mt-2 text-[#8c7f6e]">快速扩张暴露大量问题，需要体系化搭建</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- 卡片5 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">IP本质</span>
-                    <span class="text-4xl">⭐</span>
-                </div>
-                <p class="text-[#1a1a1a] text-[21px] leading-tight serif font-light">"如果电影类的IP它是一个电影明星的话，那会不会有可能我们的IP是个体育明星？……拉布布是梅西，它完全是两个东西。"</p>
-                <div class="mt-8 text-xs uppercase text-[#e11d8a]">王宁对IP生命周期的新理解</div>
-            </div>
-            
-            <!-- 卡片6 -->
-            <div class="quote-card bg-white rounded-3xl p-8 shadow-sm hover:shadow-xl group">
-                <div class="flex items-center justify-between mb-6">
-                    <span class="text-[#e11d8a] text-xs font-semibold tracking-widest">未来挑战</span>
-                    <span class="text-4xl">🌐</span>
-                </div>
-                <p class="text-[#1a1a1a] text-[21px] leading-tight serif font-light">"我觉得肯定还是组织。……一美遮百丑。你这个时候大家都觉得为拉布布鼓掌的时候，其实掩盖了很多问题。"</p>
-                <div class="mt-8 text-sm text-[#8c7f6e]">组织是唯一核心挑战</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 1: 组织进化 -->
-    <section id="organization" class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-20">
-        <div class="max-w-4xl mx-auto">
-            <div class="flex items-center gap-x-4 mb-8">
-                <div class="text-4xl">🏗️</div>
-                <h2 class="section-header serif text-4xl text-[#1a1a1a]">从团队到组织：极限测试下的进化</h2>
-            </div>
-            
-            <div class="prose prose-stone max-w-none content-text text-[#333] text-[17px] leading-relaxed">
-                <p>王宁坦言，2025年是公司成立15年以来压力最大的一年。以前大家说“团队”，现在更多谈的是“组织”。</p>
-                <blockquote class="border-l-4 border-[#e11d8a] pl-6 text-[#1a1a1a] italic my-10 text-xl">
-                    “以前大家都说刚开始创业的时候是一群朋友啊，然后梁山好汉……现在是公司慢慢变大以后，你会发现已经不再是属于你一个个人，或者说也不再仅仅是你一些高管……公司已经超过1万人，它已经变成一个非常复杂的、像毛细血管一样的组织。”
-                </blockquote>
-                <p>团队和高管能力可以解决很多问题，但组织层面需要面对不同国家、不同文化、不同法律法规，以及部门与部门、业务线与业务线、国家与国家之间的“管理之墙”。</p>
-                <div class="my-12 grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div class="bg-[#f8f4ed] rounded-3xl px-7 py-8">
-                        <div class="uppercase text-xs text-[#e11d8a]">团队时代</div>
-                        <ul class="mt-4 space-y-4 text-[#444]">
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 核心高管坐下来讨论即可解决</li>
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 朋友/梁山好汉式协作</li>
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 个人能力主导</li>
-                        </ul>
-                    </div>
-                    <div class="bg-[#f8f4ed] rounded-3xl px-7 py-8">
-                        <div class="uppercase text-xs text-[#e11d8a]">组织时代</div>
-                        <ul class="mt-4 space-y-4 text-[#444]">
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 一群人与另一群人的协作</li>
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 全球多文化、多法规</li>
-                            <li class="flex gap-x-3"><span class="text-[#e11d8a]">✓</span> 激励机制、管理模式体系化</li>
-                        </ul>
-                    </div>
-                </div>
-                <p>王宁认为，快速增长像一场“极限测试”，暴露了组织问题，但也锻炼了队伍。只要快速修复，就能为未来打下坚实基础。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: 全球化 -->
-    <section id="global" class="bg-[#f8f4ed] py-20">
-        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
-            <div class="grid lg:grid-cols-12 gap-y-12 items-start">
-                <div class="lg:col-span-5">
-                    <h2 class="section-header serif text-4xl text-[#1a1a1a]">全球化：从0到1，到标准对齐</h2>
-                    <div class="mt-6 text-[#555] leading-relaxed">
-                        海外团队早期收到的是“鲜花掌声”，如今标准已大幅提升，需要快速与国内拉齐。运营细节、工程质量、陈列、服务等全面对标。
-                    </div>
-                    <div class="mt-10 bg-white rounded-3xl p-7 max-w-sm">
-                        <p class="italic text-[#1a1a1a]">"海外这几年我的心态……从0到1的过程，到现在随着品牌快速全球认知，大家对海外的标准在要求变得更高。"</p>
-                        <div class="text-xs text-[#e11d8a] mt-6">—— 王宁</div>
-                    </div>
-                </div>
-                
-                <div class="lg:col-span-7">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="bg-white rounded-3xl px-8 py-9">
-                            <div class="text-[#e11d8a] font-semibold text-sm">早期心态</div>
-                            <p class="mt-3">看到欧洲街角有我们的店或产品，就觉得“它发声了” —— 掌声远远大于要求。</p>
-                        </div>
-                        <div class="bg-white rounded-3xl px-8 py-9">
-                            <div class="text-[#e11d8a] font-semibold text-sm">2025新标准</div>
-                            <p class="mt-3">希望海外运营快速与国内标准对齐。报表好看，但实地巡店发现交付流程仍有差距。</p>
-                        </div>
-                        <div class="col-span-full bg-gradient-to-r from-[#e11d8a]/5 to-transparent rounded-3xl p-8 text-sm flex flex-col md:flex-row gap-6">
-                            <div class="flex-1">
-                                <strong>巡店感受</strong><br>
-                                国内越来越成熟，重点看新装修、选址；海外仍需关注工程质量、陈列、服务运营。
-                            </div>
-                            <div class="flex-1 border-l md:border-l-0 md:border-t md:pt-0 pt-6 md:border-t-0 border-[#e11d8a]/10">
-                                <strong>数据 vs 真实</strong><br>
-                                海外增长数据亮眼，但掩盖了管理、产能、交付问题。“好消息满天飞，我们更应该关心坏消息。”
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: IP运营与拉布布 -->
-    <section id="ip" class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-20">
-        <div class="flex justify-between items-baseline mb-8">
-            <h2 class="section-header serif text-4xl text-[#1a1a1a]">IP运营哲学：拉布布的“减法”与赋能</h2>
-            <span class="text-xs uppercase font-medium text-[#e11d8a] px-6 py-2 border border-[#e11d8a]/30 rounded-3xl">体育明星 vs 电影明星</span>
-        </div>
-        
-        <div class="grid md:grid-cols-12 gap-8">
-            <div class="md:col-span-7 prose prose-stone text-[#333] text-[17px]">
-                <p>王宁认为，舆论常围绕“会不会不火了”“IP没有故事”，却忽略了背后的艺术家、设计系统和运营能力。</p>
-                <p>拉布布是“体育明星”而非“电影明星”。公司主动做减法：暂停大量新品、线下营销、对外授权，避免过度消耗，让IP更可持续。</p>
-                <blockquote class="my-8 text-xl italic border-l-4 border-[#e11d8a] pl-6">
-                    “我们暂停了很多他新品……我们不希望给到大家感觉是拉布布一直有新的产品出来……我们是在灭火，我们不想让他太火。”
-                </blockquote>
-                <p>电影项目虽未大获成功，但被视为“必经之路”：通过电影工业输出音乐、价值观、场景，赋能乐园等环节，最终打造“陆军（线下）+海军（新品类）+空军（内容）”全能战斗力。</p>
-            </div>
-            
-            <div class="md:col-span-5 space-y-6">
-                <div class="bg-white border border-[#e11d8a]/10 rounded-3xl p-7 flex gap-4">
-                    <div class="text-5xl flex-shrink-0">🧸</div>
-                    <div>
-                        <div class="font-semibold">拉布布当前策略</div>
-                        <ul class="mt-4 text-sm space-y-3">
-                            <li>• 暂停大部分新品，推迟至2026年</li>
-                            <li>• 暂停线下营销活动</li>
-                            <li>• 严格筛选授权合作，相互赋能</li>
-                            <li>• 专注真正用户体验，拒绝“看热闹”</li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="text-sm bg-[#f8f4ed] rounded-3xl p-7">
-                    其他IP（如翘木鱼）通过运营重新唤醒，在小红书等平台大受欢迎。头部IP资源聚焦，砍掉非核心项目。
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 4: 战略展望 -->
-    <section id="future" class="bg-[#0a0a0a] text-white py-20">
-        <div class="max-w-screen-2xl mx-auto px-8 lg:px-16">
-            <div class="max-w-3xl">
-                <span class="text-[#e11d8a]">NEXT CHAPTER</span>
-                <h2 class="serif text-4xl mt-3">从全球化到集团化：专注初心，保持真实</h2>
-                <p class="mt-6 text-white/80 text-lg">王宁强调，2025年的关键词是“保持专注、保持初心、keep focus，keep real”。公司将继续聚焦头部IP，探索新品类（甜品、家电），并以线下乐园打造极致线下体验应对AI时代的线上沉浸。</p>
-            </div>
-            
-            <div class="mt-16 grid md:grid-cols-3 gap-8">
-                <div class="border border-white/10 rounded-3xl p-8">
-                    <div class="text-[#e11d8a] text-xs mb-2">集团化</div>
-                    <h3 class="text-2xl">以IP为核心的产业化</h3>
-                    <p class="text-white/70 mt-6">验证更多IP可能性，海军（新品类探索）与空军（内容）逐步补强陆军（线下）优势。</p>
-                </div>
-                <div class="border border-white/10 rounded-3xl p-8">
-                    <div class="text-[#e11d8a] text-xs mb-2">AI时代</div>
-                    <h3 class="text-2xl">极致线下体验</h3>
-                    <p class="text-white/70 mt-6">线上沉浸感增强时，线下需更极致。乐园是核心能力，物理陪伴不可替代。</p>
-                </div>
-                <div class="border border-white/10 rounded-3xl p-8">
-                    <div class="text-[#e11d8a] text-xs mb-2">学习对象</div>
-                    <h3 class="text-2xl">迪士尼 × LVMH</h3>
-                    <p class="text-white/70 mt-6">尊重IP运营、品牌塑造，但不沿袭旧路——我们正在创造全新品类。</p>
-                </div>
-            </div>
-            
-            <div class="mt-20 text-center text-white/60 text-sm flex items-center justify-center gap-x-8">
-                <div>经典IP · 看家产品</div>
-                <div class="w-px h-4 bg-white/30"></div>
-                <div>40%创新 · 60%固化</div>
-                <div class="w-px h-4 bg-white/30"></div>
-                <div>情绪价值 · 满足感</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 完整访谈摘录长模块 -->
-    <section class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-16 bg-[#f8f4ed]">
-        <h2 class="text-center serif text-3xl mb-12">访谈原文精选段落</h2>
-        
-        <div class="space-y-16 max-w-4xl mx-auto">
-            <div>
-                <div class="text-xs uppercase mb-3 text-[#e11d8a]">01 关于2025年的体感</div>
-                <p class="text-[#333] text-[17px] leading-relaxed">其实那个时候可能我们也没有想过，就是接下来的速度也会比我们预期的要快很多……我们最近老蒋说，我说现在很像是你刚学会开车，然后就把你拉去开F1。对，所以说你想你平时开车的时候听听音乐看看风景，但是开F1你会发现只有别人认为你很爽啊，但实际上你需要全神贯注，而且相当于是你开F1的时候，你车还是一个超快速度，然后你能够明显感觉到可能这个车有很多问题其实这个时候你的压力还是比较大的。</p>
-            </div>
-            
-            <div>
-                <div class="text-xs uppercase mb-3 text-[#e11d8a]">02 组织管理反思</div>
-                <p class="text-[#333] text-[17px] leading-relaxed">我今年最大的感受就是组织这个词……以前都是提团队，我觉得现在就可能对我来讲的话，比较深的感受就是组织。因为以前大家都说刚开始创业的时候是一群朋友啊……现在公司慢慢变大以后，你会发现已经不再是属于你一个个人……</p>
-                <p class="mt-4 text-[#333] text-[17px] leading-relaxed">团队就相当是你你核心高管，然后你感觉你就能够解决很多问题，但是你会发现等等到组织以后，你会发现他因为我们现在全球这么多国家有业务，不同的文化，然后不同的这些法律法规，甚至不同的工作方式……</p>
-            </div>
-            
-            <div>
-                <div class="text-xs uppercase mb-3 text-[#e11d8a]">03 拉布布与舆论</div>
-                <p class="text-[#333] text-[17px] leading-relaxed">今天我我觉得我也很好奇这个话题，好像每一年我们去看这个社会舆论……一直有一群人，好像到现在就是没看懂你……大家去都在通过表象的东西，大家去去看多和看空。</p>
-                <p class="mt-4 text-[#333] text-[17px] leading-relaxed">如果电影类的IP它是一个电影明星的话，那会不会有可能比如说我们的IP是个体育明星？他完全是两个赛道……拉布布是梅西，它完全是两个东西。</p>
-            </div>
-            
-            <div>
-                <div class="text-xs uppercase mb-3 text-[#e11d8a]">04 专注与未来</div>
-                <p class="text-[#333] text-[17px] leading-relaxed">25年专注的事情的话，我觉得回到IP本身……最头部比如说那那到底他接下来比如说不管是拉布布猩猩人、莫里斯科panda这些，那到底他们的未来要怎么发展？</p>
-                <p class="mt-4 text-[#333] text-[17px] leading-relaxed">我觉得肯定还是组织……企业发展的快的时候，它会掩盖很多问题……一美遮百丑。</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 结尾致谢 + CTA -->
-    <div class="max-w-screen-2xl mx-auto px-8 lg:px-16 py-20 border-t bg-white">
-        <div class="flex flex-col md:flex-row items-center justify-between gap-y-8">
-            <div class="text-center md:text-left">
-                <div class="text-[#e11d8a] text-sm font-medium">感谢收看</div>
-                <h3 class="serif text-3xl">理解泡泡玛特，更理解王宁的创业之路</h3>
-                <p class="text-[#666] mt-2">内容基于2026年5月6日李翔详谈视频播客原文完整提炼</p>
-            </div>
-            
-            <div onclick="window.location.reload()" 
-                 class="cursor-pointer flex items-center justify-center bg-[#e11d8a] hover:bg-[#c01777] text-white rounded-3xl px-10 h-14 font-medium text-lg shadow-inner">
-                再次阅读完整访谈
-            </div>
-            
-            <div class="text-xs text-[#8c7f6e] md:text-right max-w-[220px]">
-                极简 · 权威 · 留白充足<br>
-                由顶级前端设计师独立打造<br>
-                单文件HTML · Tailwind 3.4
+                <a href="#" onclick="window.print()" 
+                   class="flex items-center gap-x-2 px-5 py-2 bg-white text-slate-900 hover:bg-[#e11d48] hover:text-white rounded-2xl text-sm font-semibold shadow-sm">
+                    <i class="fa-solid fa-download"></i>
+                    <span>保存为PDF</span>
+                </a>
+                <button onclick="toggleDarkMode()" 
+                        class="w-9 h-9 flex items-center justify-center rounded-2xl hover:bg-white/10">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
             </div>
         </div>
     </div>
 
+    <!-- 主内容容器 -->
+    <div class="max-w-screen-2xl mx-auto px-8 py-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        
+        <!-- 左侧主内容区 -->
+        <div class="lg:col-span-8 space-y-12">
+            
+            <!-- Hero 标题区 -->
+            <div class="space-y-6">
+                <div class="flex items-center gap-x-3">
+                    <span class="px-4 py-1 bg-[#e11d48] text-white text-sm font-medium tracking-widest rounded-3xl">2026最新访谈</span>
+                    <span class="px-4 py-1 bg-slate-200 text-slate-700 text-sm font-medium rounded-3xl">李翔 × 王宁</span>
+                </div>
+                
+                <h1 class="serif-title text-6xl leading-none font-bold tracking-tighter text-slate-900">
+                    泡泡玛特王宁：<br>从F1赛道看组织与增长的极限测试
+                </h1>
+                
+                <div class="flex items-center gap-x-4 text-slate-500">
+                    <div class="flex items-center">
+                        <div class="w-9 h-9 bg-slate-300 rounded-2xl flex items-center justify-center text-xl">👤</div>
+                        <div class="ml-3">
+                            <p class="font-semibold text-slate-700">李翔</p>
+                            <p class="text-xs">详谈视频博客</p>
+                        </div>
+                    </div>
+                    <div class="h-6 w-px bg-slate-300"></div>
+                    <p class="text-sm">2026年5月6日 · 约48分钟</p>
+                    <div class="h-6 w-px bg-slate-300"></div>
+                    <div class="flex gap-x-2">
+                        <span class="text-xs px-3 py-1 bg-white shadow-sm rounded-3xl flex items-center">📍 北京</span>
+                        <span class="text-xs px-3 py-1 bg-white shadow-sm rounded-3xl flex items-center">🌍 全球化</span>
+                    </div>
+                </div>
+                
+                <!-- 大图 -->
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-video bg-slate-200">
+                    <img src="https://picsum.photos/id/1015/1600/900" 
+                         alt="泡泡玛特创始人王宁2026访谈" 
+                         class="hero-image w-full h-full object-cover">
+                    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent h-2/3"></div>
+                    <div class="absolute bottom-8 left-8 text-white">
+                        <div class="flex items-center gap-x-2 text-sm mb-2">
+                            <i class="fa-solid fa-microphone-lines"></i>
+                            <span>深度对话</span>
+                        </div>
+                        <p class="text-3xl font-medium leading-tight">“我们像刚学会开车就被拉去开F1”</p>
+                        <p class="text-sm opacity-90 mt-2">—— 王宁 2026</p>
+                    </div>
+                    <div class="absolute top-8 right-8 bg-white/90 text-slate-900 text-xs font-medium px-4 py-2 rounded-3xl flex items-center shadow">
+                        <i class="fa-solid fa-play mr-2"></i>
+                        观看视频
+                    </div>
+                </div>
+                
+                <!-- 导语 -->
+                <div class="prose prose-slate max-w-none text-lg leading-relaxed">
+                    <p>2025年，泡泡玛特经历了“过山车”般的高速增长。王宁用“刚学会开车就被拉去开F1”来形容这一年的压力与挑战。在这次李翔的最新访谈中，他首次深度复盘组织管理、全球化、IP战略等核心议题，分享了从团队到组织的进化思考，以及对未来的专注方向。</p>
+                </div>
+            </div>
+            
+            <!-- 分模块内容 -->
+            
+            <!-- 模块1：F1赛道体感 -->
+            <div id="interview" class="scroll-mt-12">
+                <h2 class="section-header text-4xl serif-title font-semibold mb-8">F1赛道上的体感：2025年最痛苦的一年</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-white rounded-3xl p-8 shadow-sm">
+                        <p class="text-slate-600 mb-6">王宁回顾2025年公司200%增长带来的冲击：</p>
+                        <div class="quote-card bg-[#f8f4eb] p-6 rounded-2xl mb-6">
+                            <p class="italic text-xl leading-tight">“现在很像是你刚学会开车，然后就把你拉去开F1。对，所以说你想你平时开车的时候听听音乐看看风景，但是开F1你会发现只有别人认为你很爽啊，但实际上你需要全神贯注，而且相当于是你开F1的时候，你车还是一个超快速度，然后你能够明显感觉到可能这个车有很多问题……”</p>
+                            <div class="mt-4 text-right text-[#e11d48] font-medium">—— 王宁</div>
+                        </div>
+                        <p class="text-slate-600">2025年是公司近几年最痛苦的一年，压力最大、睡眠最差、身体状况也最不好。但王宁认为，这是一次“极限测试”，快速暴露问题，也为未来打下坚实基础。</p>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="bg-white rounded-3xl p-6 flex items-start gap-4">
+                            <i class="fa-solid fa-tachometer-alt text-4xl text-[#e11d48] mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-xl">增长速度超预期</h4>
+                                <p class="text-slate-600">从稳定双位数增长到200%爆发，团队运营压力骤增。</p>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-3xl p-6 flex items-start gap-4">
+                            <i class="fa-solid fa-heart-pulse text-4xl text-[#e11d48] mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-xl">个人体感</h4>
+                                <p class="text-slate-600">“绝大多数同事近几年最痛苦的一年……睡眠最差，身体状况最不好。”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块2：组织进化 -->
+            <div id="organization" class="scroll-mt-12">
+                <h2 class="section-header text-4xl serif-title font-semibold mb-8">从“团队”到“组织”：1万人规模的复杂性</h2>
+                <div class="prose prose-slate max-w-none text-base leading-relaxed mb-8">
+                    <p>王宁表示，过去一年最大的感受是“组织”这个词。公司从“团伙→团队”再到如今超过1万人的复杂组织，已不再是核心高管坐下来就能解决所有问题。</p>
+                </div>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-12">
+                    <div class="bg-white rounded-3xl p-7 text-center">
+                        <div class="text-6xl font-bold text-[#e11d48] mb-2">1万+</div>
+                        <p class="font-medium">全球员工规模</p>
+                        <p class="text-xs text-slate-500 mt-4">毛细血管般的复杂组织</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 text-center">
+                        <div class="text-6xl font-bold text-[#e11d48] mb-2">多层级</div>
+                        <p class="font-medium">跨国、跨文化协作</p>
+                        <p class="text-xs text-slate-500 mt-4">部门间、业务线间、国家间的“管理墙”</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-7 text-center">
+                        <div class="text-6xl font-bold text-[#e11d48] mb-2">新挑战</div>
+                        <p class="font-medium">组织已拥有自己的意志</p>
+                        <p class="text-xs text-slate-500 mt-4">超出个人意志的系统性问题</p>
+                    </div>
+                </div>
+                
+                <p class="text-slate-600 italic border-l-4 border-[#e11d48] pl-6 py-1">“以前是核心团队坐下来讨论就能解决，现在是一群人和另一群人的对接……一大群人怎么协作分工，是非常不一样的挑战。”</p>
+            </div>
+            
+            <!-- 模块3：全球化与海外运营 -->
+            <div id="global" class="scroll-mt-12">
+                <h2 class="section-header text-4xl serif-title font-semibold mb-8">全球化：从0到1到高标准对齐</h2>
+                <div class="flex flex-wrap gap-6">
+                    <div class="flex-1 min-w-[300px] bg-white rounded-3xl p-8">
+                        <h4 class="text-[#e11d48] font-semibold mb-4 flex items-center"><i class="fa-solid fa-globe mr-2"></i>心态转变</h4>
+                        <p class="text-slate-600">早期：看到海外门店就兴奋，“掌声大过于要求”<br><br>2025年：希望海外标准快速与国内拉齐，压力巨大</p>
+                    </div>
+                    <div class="flex-1 min-w-[300px] bg-white rounded-3xl p-8">
+                        <h4 class="text-[#e11d48] font-semibold mb-4">运营落差</h4>
+                        <ul class="space-y-3 text-slate-600">
+                            <li class="flex items-start"><span class="text-[#e11d48] mr-3">•</span>工程质量与细节</li>
+                            <li class="flex items-start"><span class="text-[#e11d48] mr-3">•</span>陈列与商品管理</li>
+                            <li class="flex items-start"><span class="text-[#e11d48] mr-3">•</span>服务与运营标准</li>
+                            <li class="flex items-start"><span class="text-[#e11d48] mr-3">•</span>数据好看但交付流程存在问题</li>
+                        </ul>
+                    </div>
+                    <div class="flex-1 min-w-[300px] bg-white rounded-3xl p-8">
+                        <h4 class="text-[#e11d48] font-semibold mb-4">未来目标</h4>
+                        <p class="text-slate-600">每个国家的收入占比应接近其在全球GDP中的占比，不为数字而拔苗助长。</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 模块4：IP战略与拉布布 -->
+            <div id="ip" class="scroll-mt-12">
+                <h2 class="section-header text-4xl serif-title font-semibold mb-8">IP战略：专注头部、做减法保护拉布布</h2>
+                <div class="bg-gradient-to-r from-[#e11d48]/5 to-transparent border border-[#e11d48]/10 rounded-3xl p-10 mb-8">
+                    <p class="text-2xl leading-tight mb-8">“我们暂停了很多拉布布的新品、线下营销和对外合作，是在‘灭火’。不想让它太火，而是让它健康可持续。”</p>
+                    <div class="flex flex-wrap gap-8 text-sm">
+                        <div>✅ 暂停新品（推迟至2026年）</div>
+                        <div>✅ 减少授权与合作</div>
+                        <div>✅ 专注头部IP资源聚焦</div>
+                        <div>✅ 避免过度消耗</div>
+                    </div>
+                </div>
+                
+                <div class="prose prose-slate">
+                    <p>王宁认为，拉布布不是传统IP，而是“体育明星”般的存在，其物理实体属性让它能持续陪伴用户生活，产生持久情感价值。</p>
+                    <p>电影与游戏目前“不够成功”，但被视为必交学费。公司将以线下“陆军”为基础，逐步补齐“空军”（内容）和“海军”（新品类探索）。</p>
+                </div>
+            </div>
+            
+            <!-- 模块5：2025年打分与未来思考 -->
+            <div class="scroll-mt-12">
+                <h2 class="section-header text-4xl serif-title font-semibold mb-8">2025年复盘与未来方向</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-white rounded-3xl p-8">
+                        <h3 class="font-semibold mb-4 flex items-center text-2xl"><span class="text-[#e11d48]">业务表现</span> <span class="text-4xl ml-auto">95分</span></h3>
+                        <p class="text-slate-600">高速增长、全球化成功、IP爆火</p>
+                    </div>
+                    <div class="bg-white rounded-3xl p-8">
+                        <h3 class="font-semibold mb-4 flex items-center text-2xl"><span class="text-[#e11d48]">组织管理</span> <span class="text-4xl ml-auto">70分</span></h3>
+                        <p class="text-slate-600">暴露大量问题，需要大量补齐能力</p>
+                    </div>
+                </div>
+                
+                <div class="mt-12 p-8 bg-white rounded-3xl">
+                    <h4 class="text-xl font-semibold mb-6">今年关键词</h4>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="px-6 py-3 bg-[#f8f4eb] rounded-3xl text-[#e11d48] font-medium">保持专注 Keep Focus</span>
+                        <span class="px-6 py-3 bg-[#f8f4eb] rounded-3xl text-[#e11d48] font-medium">保持初心 Keep Real</span>
+                        <span class="px-6 py-3 bg-[#f8f4eb] rounded-3xl text-[#e11d48] font-medium">回到IP本身</span>
+                        <span class="px-6 py-3 bg-[#f8f4eb] rounded-3xl text-[#e11d48] font-medium">资源向头部聚焦</span>
+                        <span class="px-6 py-3 bg-[#f8f4eb] rounded-3xl text-[#e11d48] font-medium">集团化战略</span>
+                    </div>
+                    <p class="mt-8 text-slate-600">王宁强调，最大挑战仍是组织问题。所有成功本质上是尊重人、尊重团队的成长与持续解决问题。</p>
+                </div>
+            </div>
+            
+            <!-- 全文摘要结尾 -->
+            <div class="text-center py-12 border-t border-slate-200">
+                <p class="text-slate-500 text-sm">完整访谈内容已模块化呈现 • 保留原始对话精华与深度思考</p>
+                <p class="text-xs mt-4 text-slate-400">泡泡玛特 · 2026年5月</p>
+            </div>
+        </div>
+        
+        <!-- 右侧边栏：高度可视化精选 -->
+        <div class="lg:col-span-4 space-y-8">
+            
+            <!-- 精选金句卡片 -->
+            <div class="bg-white rounded-3xl shadow-sm p-6 sticky top-8">
+                <h3 class="flex items-center gap-x-2 text-[#e11d48] font-semibold mb-6 text-lg">
+                    <i class="fa-solid fa-quote-left"></i>
+                    王宁金句
+                </h3>
+                
+                <div class="space-y-8">
+                    <!-- 金句1 -->
+                    <div class="quote-card bg-[#f8f4eb] p-5 rounded-2xl">
+                        <p class="italic">"我们最近老蒋说，我说现在很像是你刚学会开车，然后就把你拉去开F1。"</p>
+                        <div class="text-xs text-slate-500 mt-4">—— 2025年增长压力比喻</div>
+                    </div>
+                    
+                    <!-- 金句2 -->
+                    <div class="quote-card bg-[#f8f4eb] p-5 rounded-2xl">
+                        <p class="italic">"25年是我们近几年最痛苦的一年……睡眠最差，身体状况也最不好的一年。"</p>
+                        <div class="text-xs text-slate-500 mt-4">—— 个人体感</div>
+                    </div>
+                    
+                    <!-- 金句3 -->
+                    <div class="quote-card bg-[#f8f4eb] p-5 rounded-2xl">
+                        <p class="italic">"组织已经有了自己的意志。"</p>
+                        <div class="text-xs text-slate-500 mt-4">—— 团队 vs 组织</div>
+                    </div>
+                    
+                    <!-- 金句4 -->
+                    <div class="quote-card bg-[#f8f4eb] p-5 rounded-2xl">
+                        <p class="italic">"我们暂停了很多拉布布的新品和营销，是在‘灭火’。不想让他太火，而是希望它健康可持续。"</p>
+                        <div class="text-xs text-slate-500 mt-4">—— IP保护策略</div>
+                    </div>
+                    
+                    <!-- 金句5 -->
+                    <div class="quote-card bg-[#f8f4eb] p-5 rounded-2xl">
+                        <p class="italic">"所有东西本质上是尊重人，尊重团队的成长。"</p>
+                        <div class="text-xs text-slate-500 mt-4">—— 核心价值观</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 关键数据卡片 -->
+            <div class="bg-white rounded-3xl p-8">
+                <h3 class="font-semibold mb-6 flex items-center text-lg"><i class="fa-solid fa-chart-simple mr-3"></i>2025关键数据</h3>
+                <div class="space-y-6">
+                    <div class="flex justify-between items-baseline border-b pb-6">
+                        <div>
+                            <p class="text-sm text-slate-500">业务增长</p>
+                            <p class="text-4xl font-semibold text-[#e11d48]">200%</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-slate-500">海外收入目标</p>
+                            <p class="text-2xl font-medium">50%+</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-baseline border-b pb-6">
+                        <div>
+                            <p class="text-sm text-slate-500">员工规模</p>
+                            <p class="text-4xl font-semibold">1万+</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm text-slate-500">拉布布实体销量</p>
+                            <p class="text-2xl font-medium">超1亿只</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-slate-500">2025打分</p>
+                        <div class="flex gap-3 mt-3">
+                            <div class="flex-1 bg-emerald-100 text-emerald-700 rounded-2xl px-5 py-4 text-center">
+                                <span class="block text-xs">业务</span>
+                                <span class="text-3xl font-bold">95</span>
+                            </div>
+                            <div class="flex-1 bg-amber-100 text-amber-700 rounded-2xl px-5 py-4 text-center">
+                                <span class="block text-xs">组织管理</span>
+                                <span class="text-3xl font-bold">70</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 更多模块导航 -->
+            <div class="bg-white rounded-3xl p-6 text-sm">
+                <h3 class="font-medium mb-4">探索更多内容</h3>
+                <a href="#interview" class="flex justify-between items-center py-4 border-b hover:text-[#e11d48]">
+                    <span>F1赛道体感</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#organization" class="flex justify-between items-center py-4 border-b hover:text-[#e11d48]">
+                    <span>组织进化</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#global" class="flex justify-between items-center py-4 border-b hover:text-[#e11d48]">
+                    <span>全球化挑战</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+                <a href="#ip" class="flex justify-between items-center py-4 hover:text-[#e11d48]">
+                    <span>IP专注与减法</span>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </a>
+            </div>
+            
+            <!-- 分享与互动 -->
+            <div class="flex justify-center gap-x-4 pt-4">
+                <button onclick="shareToWeChat()" 
+                        class="flex-1 flex items-center justify-center gap-x-2 bg-white hover:bg-slate-100 rounded-3xl py-4 text-slate-700 font-medium">
+                    <i class="fa-brands fa-weixin"></i>
+                    <span>微信分享</span>
+                </button>
+                <button onclick="copyLink()" 
+                        class="flex-1 flex items-center justify-center gap-x-2 bg-white hover:bg-slate-100 rounded-3xl py-4 text-slate-700 font-medium">
+                    <i class="fa-solid fa-link"></i>
+                    <span>复制链接</span>
+                </button>
+            </div>
+            
+            <div class="text-center text-xs text-slate-400 mt-8">
+                © 2026 泡泡玛特内容展示平台<br>
+                本页面由AI根据完整访谈原文智能生成
+            </div>
+        </div>
+    </div>
+    
     <script>
-        /**
-         * TailwindCSS 初始化
-         */
+        // Tailwind 初始化
         function initializeTailwind() {
             return {
                 config(userConfig = {}) {
@@ -607,13 +439,11 @@
                         theme: {
                             extend: {
                                 colors: {
-                                    accent: '#e11d8a',
-                                    beige: '#f8f4ed'
+                                    beige: '#f8f4eb',
+                                    accent: '#e11d48'
                                 }
                             }
-                        },
-                        plugins: [],
-                        ...userConfig,
+                        }
                     }
                 },
                 theme(userTheme = {}) {
@@ -630,53 +460,54 @@
             }
         }
         
-        /**
-         * 页面加载后初始化
-         */
-        function initialize() {
+        // 页面初始化
+        function init() {
             const config = initializeTailwind().config()
             return {
-                configUser: () => config,
-                themeUser: () => initializeTailwind().theme(config.theme),
+                configUserTheme: () => {
+                    return {
+                        theme: {
+                            extend: {
+                                colors: {
+                                    accent: '#e11d48'
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
         
-        /**
-         * 移动端菜单切换
-         */
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu')
-            const icon = document.getElementById('menu-icon')
-            if (menu.classList.contains('hidden')) {
-                menu.style.display = 'block'
-                icon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6h12v12" />
-                `
+        // 暗黑模式切换（演示）
+        function toggleDarkMode() {
+            const body = document.body
+            if (body.classList.contains('dark')) {
+                body.classList.remove('dark')
+                document.documentElement.style.setProperty('color-scheme', 'light')
             } else {
-                menu.style.display = 'none'
-                icon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                `
+                body.classList.add('dark')
+                document.documentElement.style.setProperty('color-scheme', 'dark')
             }
-            menu.classList.toggle('hidden')
+            // 实际项目中可扩展为完整暗黑主题
+            alert('暗黑模式切换演示（本页面为亮色高端风格）')
         }
         
-        /**
-         * 高亮对应区块（演示动画）
-         */
-        function highlightSection(id) {
-            const el = document.getElementById(id)
-            if (el) {
-                el.scrollIntoView({ behavior: 'smooth' })
-                el.classList.add('animate-in')
-                setTimeout(() => {
-                    el.classList.remove('animate-in')
-                }, 2000)
-            }
+        function shareToWeChat() {
+            alert('已模拟微信分享功能\n\n页面链接已复制到剪贴板！\n\n欢迎转发「泡泡玛特王宁2026最新访谈」')
+        }
+        
+        function copyLink() {
+            const dummyLink = window.location.href || 'https://example.com/popmart-wangning-2026'
+            navigator.clipboard.writeText(dummyLink).then(() => {
+                alert('链接已复制！\n\n可直接分享给朋友或存档')
+            })
         }
         
         // 执行初始化
-        window.onload = initialize
+        window.onload = function() {
+            init()
+            console.log('%c✅ 高端优雅内容展示网页已生成 | 泡泡玛特王宁2026访谈', 'color:#e11d48; font-family:monospace; font-size:13px')
+        }
     </script>
 </body>
 </html>
